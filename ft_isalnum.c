@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctype.c                                         :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 18:29:45 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/08/26 18:29:54 by ecarvalh         ###   ########.fr       */
+/*   Created: 2023/09/07 17:42:06 by ecarvalh          #+#    #+#             */
+/*   Updated: 2023/09/07 18:40:04 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
-}
-
-int	ft_isdigit(int c)
-{
-	return (c >= '0' && c <= '9');
-}
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
-	return (isalpha(c) || isdigit(c));
-}
-
-int	ft_isascii(int c)
-{
-	return (c >= 0 && c <= 127);
-}
-
-int	ft_isprint(int c)
-{
-	return (c >= ' ' && c <= '~');
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

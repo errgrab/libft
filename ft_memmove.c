@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 18:30:01 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/08 15:50:07 by ecarvalh         ###   ########.fr       */
+/*   Created: 2023/09/08 19:05:32 by ecarvalh          #+#    #+#             */
+/*   Updated: 2023/09/08 20:03:37 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r' 
-		|| c == ' ');
-}
+	void	*odest;
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	sign;
-	int	result;
-
-	i = 0;
-	sign = 1;
-	result = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	odest = dest;
+	if (dest < src)
 	{
-		if (str[i] == '-')
-			sign = -sign;
-		i++;
+		while (n--)
+			*(char *)(dest++) = *(const char *)(src++);
 	}
-	while (ft_isdigit(str[i]))
-		result = result * 10 + (str[i++] - '0');
-	return (result * sign);
+	else
+	{
+		dest += n;
+		src += n;
+		while (n--)
+			*(char *)(--dest) = *(const char *)(--src);
+	}
+	return (dest);
 }
