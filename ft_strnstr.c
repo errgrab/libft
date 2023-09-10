@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 19:05:32 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/09 19:20:33 by ecarvalh         ###   ########.fr       */
+/*   Created: 2023/09/10 22:54:48 by ecarvalh          #+#    #+#             */
+/*   Updated: 2023/09/10 23:09:17 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	void	*odest;
+	size_t	s2_len;
 
-	odest = dest;
-	if (dest < src)
-	{
-		while (n--)
-			*(char *)(dest++) = *(const char *)(src++);
-	}
-	else
-	{
-		dest += n;
-		src += n;
-		while (n--)
-			*(char *)(--dest) = *(const char *)(--src);
-	}
-	return (odest);
+	if (!*s2)
+		return ((char *)s1);
+	s2_len = ft_strlen(s2);
+	while (*s1 && n-- >= s2_len)
+		if (ft_strncmp(s1++, s2, s2_len) == 0)
+			return ((char *)--s1);
+	return (NULL);
 }

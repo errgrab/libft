@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 19:05:32 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/09 19:20:33 by ecarvalh         ###   ########.fr       */
+/*   Created: 2023/09/09 20:23:31 by ecarvalh          #+#    #+#             */
+/*   Updated: 2023/09/10 22:18:35 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *restrict src, size_t sz)
 {
-	void	*odest;
+	size_t	dst_len;
+	size_t	src_len;
 
-	odest = dest;
-	if (dest < src)
-	{
-		while (n--)
-			*(char *)(dest++) = *(const char *)(src++);
-	}
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	if (sz <= dst_len)
+		return (src_len + sz);
+	if (src_len < sz - dst_len)
+		ft_strlcpy(dst + dst_len, src, src_len + 1);
 	else
-	{
-		dest += n;
-		src += n;
-		while (n--)
-			*(char *)(--dest) = *(const char *)(--src);
-	}
-	return (odest);
+		ft_strlcpy(dst + dst_len, src, sz - dst_len);
+	return (dst_len + src_len);
 }
