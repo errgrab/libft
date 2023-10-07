@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 20:21:21 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/10/06 20:21:57 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2023/10/07 14:44:07 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t l)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < l && s[start])
+	while (i < l && s[start + i])
 	{
-		str[i] = s[start];
+		str[i] = s[start + i];
 		i++;
-		start++;
 	}
 	str[i] = '\0';
 	return (str);
