@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 18:36:07 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/10/07 16:01:36 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2023/10/07 17:52:17 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+/* Bonus */
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /* Part 1 */
 
