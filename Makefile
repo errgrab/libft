@@ -6,11 +6,11 @@
 #    By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 17:50:19 by ecarvalh          #+#    #+#              #
-#    Updated: 2023/10/03 18:27:04 by ecarvalh         ###   ########.fr        #
+#    Updated: 2023/10/06 20:31:56 by ecarvalh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= $(wildcard ft_*.c)
+SRCS	= $(filter-out ft_*_bonus.c, $(wildcard ft_*.c))
 OBJS	= $(SRCS:.c=.o)
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror

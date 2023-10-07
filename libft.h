@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 18:36:07 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/10 23:47:54 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:59:26 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+/* Part 1 */
 
 int		ft_atoi(const char *str);
 
@@ -45,5 +47,10 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+/* Part 2 */
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
