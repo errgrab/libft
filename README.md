@@ -1,58 +1,56 @@
-# This is Libft
+# Libft
 
-## It's the first project of the Common Core
+## Overview
 
- - It need to be heavly tested, because it will be used in future projects
- - It's very important to be correct and concise, so you can understand and correct it when needed.
- - So, lets start...
+Libft is the inaugural project of the Common Core curriculum, designed to create a robust and tested library of essential C functions. Rigorous testing is essential as this library will serve as a foundation for future projects. The code is intended to be correct, concise, and easily understandable for maintenance and expansion.
 
 ## Roadmap
 
 ### Part 1 - Libc functions
 
-Função | Descrição | Status
+Function | Description | Status
 --- | --- | ---
-`ft_isdigit` | Verifica se o caractere é um dígito | :heavy_check_mark:
-`ft_isalnum` | Verifica se o caractere é alfanumérico | :heavy_check_mark:
-`ft_isascii` | Verifica se o caractere pertence à tabela ASCII | :heavy_check_mark:
-`ft_isprint` | Verifica se o caractere é imprimível | :heavy_check_mark:
-`ft_strlen` | Retorna o comprimento de uma string | :heavy_check_mark:
-`ft_memset` | Preenche uma área de memória com um byte específico | :heavy_check_mark:
-`ft_bzero` | Define os primeiros n bytes de uma área de memória como zero | :heavy_check_mark:
-`ft_memcpy` | Copia uma área de memória para outra | :heavy_check_mark:
-`ft_memmove` | Move uma área de memória para outra | :heavy_check_mark:
-`ft_strlcpy` | Copia uma string garantindo um tamanho máximo | :heavy_check_mark:
-`ft_strlcat` | Concatena duas strings garantindo um tamanho máximo | :heavy_check_mark:
-`ft_toupper` | Converte um caractere para maiúsculo | :heavy_check_mark:
-`ft_tolower` | Converte um caractere para minúsculo | :heavy_check_mark:
-`ft_strchr` | Localiza a primeira ocorrência de um caractere em uma string | :heavy_check_mark:
-`ft_strrchr` | Localiza a última ocorrência de um caractere em uma string | :heavy_check_mark:
-`ft_strncmp` | Compara os primeiros n caracteres de duas strings | :heavy_check_mark:
-`ft_memchr` | Localiza a primeira ocorrência de um byte em uma área de memória | :heavy_check_mark:
-`ft_memcmp` | Compara duas áreas de memória | :heavy_check_mark:
-`ft_strnstr` | Localiza uma substring em uma string com um comprimento máximo | :heavy_check_mark:
-`ft_atoi` | Converte uma string para um inteiro | :heavy_check_mark:
-`ft_calloc` | Aloca uma área de memória e a inicializa com zero | :heavy_check_mark:
-`ft_strdup` | Duplica uma string existente | :heavy_check_mark:
+`ft_isdigit` | Check if the character is a digit | ✅
+`ft_isalnum` | Check if the character is alphanumeric | ✅
+`ft_isascii` | Verify if the character belongs to the ASCII table | ✅
+`ft_isprint` | Check if the character is printable | ✅
+`ft_strlen` | Return the length of a string | ✅
+`ft_memset` | Fill a memory area with a specific byte | ✅
+`ft_bzero` | Set the first n bytes of a memory area to zero | ✅
+`ft_memcpy` | Copy a memory area to another | ✅
+`ft_memmove` | Move a memory area to another | ✅
+`ft_strlcpy` | Copy a string, ensuring a maximum size | ✅
+`ft_strlcat` | Concatenate two strings, ensuring a maximum size | ✅
+`ft_toupper` | Convert a character to uppercase | ✅
+`ft_tolower` | Convert a character to lowercase | ✅
+`ft_strchr` | Locate the first occurrence of a character in a string | ✅
+`ft_strrchr` | Locate the last occurrence of a character in a string | ✅
+`ft_strncmp` | Compare the first n characters of two strings | ✅
+`ft_memchr` | Locate the first occurrence of a byte in a memory area | ✅
+`ft_memcmp` | Compare two memory areas | ✅
+`ft_strnstr` | Locate a substring in a string with a maximum length | ✅
+`ft_atoi` | Convert a string to an integer | ✅
+`ft_calloc` | Allocate a memory area and initialize it with zero | ✅
+`ft_strdup` | Duplicate an existing string | ✅
 
 ### Part 2 - Additional functions
 
-Função | Descrição | Status
+Function | Description | Status
 --- | --- | ---
-`ft_substr` | Retorna uma parte específica de uma string | :heavy_check_mark:
-`ft_strjoin` | Retorna a concatenação de duas strings | :heavy_check_mark:
-`ft_strtrim` | Remove caracteres específicos do início e do final de uma string | :heavy_check_mark:
-`ft_split` | Retorna um `null-terminated` array de strings separados por um separador especificado | :heavy_check_mark:
-`ft_itoa` | Retorna uma string que é a representação de um número | :heavy_check_mark:
-`ft_strmapi` | Retorna uma string que uma função é executada para cada caractere de uma string | :construction:
-`ft_striteri` | Aplica uma função a cada caractere de uma string | :construction:
-`ft_putchar_fd` | Faz o `output` de um caractere para o `file-descriptor` especificado | :construction:
-`ft_putstr_fd` | Faz o `output` de uma string para o `file-descriptor` especificado | :construction:
-`ft_putendl_fd` | Faz o `output` de uma string terminado em `\n` para o `file-descriptor` especificado | :construction:
-`ft_putnbr_fd` | Faz o `output` de um número para o `file-descriptor` especificado | :construction:
+`ft_substr` | Return a specific part of a string | ✅
+`ft_strjoin` | Return the concatenation of two strings | ✅
+`ft_strtrim` | Remove specific characters from the beginning and end of a string | ✅
+`ft_split` | Return a `null-terminated` array of strings separated by a specified separator | ✅
+`ft_itoa` | Return a string that is the representation of a number | ✅
+`ft_strmapi` | Return a string where a function is executed for each character of a string | 🚧
+`ft_striteri` | Apply a function to each character of a string | 🚧
+`ft_putchar_fd` | Output a character to the specified file descriptor | 🚧
+`ft_putstr_fd` | Output a string to the specified file descriptor | 🚧
+`ft_putendl_fd` | Output a string terminated in `\n` to the specified file descriptor | 🚧
+`ft_putnbr_fd` | Output a number to the specified file descriptor | 🚧
 
 ---
 
-**Observação:** 
-- :heavy_check_mark: para funções implementadas
-- :construction: para funções em andamento
+**Note:**
+- ✅ for implemented functions
+- 🚧 for functions in progress
