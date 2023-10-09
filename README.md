@@ -49,6 +49,20 @@ Function | Description | Status
 `ft_putendl_fd` | Output a string terminated in `\n` to the specified file descriptor | ✅
 `ft_putnbr_fd` | Output a number to the specified file descriptor | ✅
 
+### Bonus part
+
+Function | Description | Status
+--- | --- | ---
+`ft_lstnew` | Return a new list node | 🚧
+`ft_lstadd_front` | Adds a node at the beginning of the list | 🚧
+`ft_lstsize` | Returns the number of nodes in the list | 🚧
+`ft_lstlast` | Returns the last node of the list | 🚧
+`ft_lstadd_back` | Adds a node at the end of the list | 🚧
+`ft_lstdelone` | Frees a node content by aplying a function to it | 🚧
+`ft_lstclear` | Deletes and frees the given node and every sucessor of that node | 🚧
+`ft_lstiter` | Apply a function to each node of a list | 🚧
+`ft_lstmap` | Return a new list where a function is executed for each node of a list | 🚧
+
 ---
 
 **Note:**
