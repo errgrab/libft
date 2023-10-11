@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 19:03:42 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/10/07 20:52:15 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:43:09 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@ int	ft_intlen(int n)
 	unsigned int	nb;
 
 	len = 1;
+	nb = n;
 	if (n < 0)
 	{
 		nb = -n;
 		len++;
 	}
-	else
-		nb = n;
 	while (nb >= 10)
 	{
 		nb /= 10;
@@ -44,13 +43,12 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[intlen] = '\0';
+	nb = n;
 	if (n < 0)
 	{
 		str[0] = '-';
 		nb = -n;
 	}
-	else
-		nb = n;
 	while (intlen-- > 0 && str[intlen] != '-')
 	{
 		str[intlen] = (nb % 10) + '0';
@@ -58,7 +56,6 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
 /*
 #include <stdio.h>
 int main(int argc, char **argv)
