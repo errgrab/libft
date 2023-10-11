@@ -39,7 +39,7 @@ Function | Description | Status
 --- | --- | ---
 `ft_substr` | Return a specific part of a string | ✅
 `ft_strjoin` | Return the concatenation of two strings | ✅
-`ft_strtrim` | Remove specific characters from the beginning and end of a string | ✅✅
+`ft_strtrim` | Remove specific characters from the beginning and end of a string | ✅
 `ft_split` | Return a `null-terminated` array of strings separated by a specified separator | ✅
 `ft_itoa` | Return a string that is the representation of a number | ✅
 `ft_strmapi` | Return a string where a function is executed for each character of a string | ✅
