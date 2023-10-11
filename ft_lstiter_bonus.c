@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 18:37:52 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/10/09 18:38:22 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2023/10/11 19:22:09 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*res;
+	t_list	*tmp;
 
 	if (!lst || !f)
 		return ;
-	res = lst;
-	while (res)
+	tmp = lst;
+	while (tmp)
 	{
-		f(res->content);
-		res = res->next;
+		f(tmp->content);
+		tmp = tmp->next;
 	}
 }
