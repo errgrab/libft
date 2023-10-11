@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 22:21:33 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/10 22:24:21 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:45:24 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	const void	*res;
+	size_t	i;
 
-	res = ft_memchr(s, c, ft_strlen(s) + 1);
-	return ((char *)res);
+	i = 0;
+	while (s[i])
+		if (s[i++] == (unsigned char)c)
+			return ((char *)&s[--i]);
+	if (!(unsigned char)c)
+		return ((char *)&s[i]);
+	return (NULL);
 }
