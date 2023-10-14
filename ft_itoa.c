@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 19:03:42 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/10/11 17:43:09 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2023/10/14 19:40:55 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 	unsigned int	nb;
 
 	intlen = ft_intlen(n);
-	str = (char *)malloc(sizeof(char) * (intlen + 1));
+	str = (char *)ft_calloc(intlen + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	str[intlen] = '\0';
