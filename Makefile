@@ -6,21 +6,24 @@
 #    By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 17:50:19 by ecarvalh          #+#    #+#              #
-#    Updated: 2023/11/13 13:08:43 by ecarvalh         ###   ########.fr        #
+#    Updated: 2024/01/19 13:05:24 by ecarvalh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= $(filter-out $(wildcard *_bonus.c), $(wildcard *.c))
-B_SRCS	= $(wildcard *_bonus.c)
-B_OBJS	= $(B_SRCS:.c=.o)
+SDIR	= src/ft_ctype .
+SRCS	= $(foreach dir,$(SDIR), $(wildcard $(dir)/ft_*.c))
 OBJS	= $(SRCS:.c=.o)
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -I. -Iinclude
 NAME	= libft.a
+
+vpath %.c $(SDIR)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	$(AR) r $(NAME) $(OBJS)
+
+bonus: $(NAME)
 
 clean:
 	$(RM) $(OBJS) $(B_OBJS)
@@ -29,8 +32,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean $(NAME)
-
-bonus: $(OBJS) $(B_OBJS)
-	ar rc $(NAME) $(OBJS) $(B_OBJS)
 
 .PHONY: all clean fclean re bonus
