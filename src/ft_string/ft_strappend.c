@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:11:45 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/01/25 16:52:41 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:19:14 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strappend(char **dest, char *src)
 {
-	char *old_dest;
+	char	*old_dest;
 
 	if (!src)
 	{
