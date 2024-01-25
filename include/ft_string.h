@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 00:29:52 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/01/23 00:30:29 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:47:53 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char	*ft_strjoin(char const *s1, char const*s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strmapi(char const*s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_strappend(char **dest, char *src);
 
 void	ft_bzero(void *s, size_t n);
 

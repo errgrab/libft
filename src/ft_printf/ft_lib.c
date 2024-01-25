@@ -1,23 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdio.h                                         :+:      :+:    :+:   */
+/*   ft_lib.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 00:28:17 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/01/25 16:21:22 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/01/07 13:25:23 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/01/25 16:57:51 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDIO_H
-# define FT_STDIO_H
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char*s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int	ft_based(size_t n, char *base)
+{
+	int		len;
+	size_t	base_len;
 
-char	*ft_getline_fd(int fd);
+	len = 0;
+	base_len = ft_strlen(base);
+	if (n >= base_len)
+		len += ft_based(n / base_len, base);
+	len += write(1, &base[n % base_len], 1);
+	return (len);
+}
 
-#endif
+int	ft_nbrlen(size_t nbr, int base_len)
+{
+	int		len;
+
+	len = 0;
+	if (nbr == 0)
+		return (1);
+	while (nbr)
+	{
+		nbr /= base_len;
+		len++;
+	}
+	return (len);
+}
