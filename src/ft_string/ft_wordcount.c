@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:55:06 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/02/12 18:58:50 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/02/13 14:20:58 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_wordcount(char const *str, char const *delim)
 	i = 0;
 	while (str[i])
 	{
-		i += ft_strspn(str, delim);
+		i += ft_strspn(&str[i], delim);
 		if (str[i])
 		{
-			i += ft_strcspn(str, delim);
+			i += ft_strcspn(&str[i], delim);
 			count++;
 		}
 	}
