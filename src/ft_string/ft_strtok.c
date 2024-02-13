@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 19:09:26 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/02/12 21:29:51 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/02/13 14:39:28 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ char	*ft_strtok(char *str, char const *delim)
 		return (NULL);
 	str = buf + ft_strspn(buf, delim);
 	buf = str + ft_strcspn(str, delim);
-	if (*buf)
-		*(buf++) = '\0';
-	else
+	if (buf == str)
 	{
 		buf = NULL;
 		return (buf);
 	}
+	if (*buf)
+		*(buf++) = '\0';
+	else
+		buf = NULL;
 	return (str);
 }
