@@ -6,11 +6,11 @@
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:46:45 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/02/12 18:51:00 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/02/21 12:35:11 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "libft.h"
+#include "libft.h"
 
 int	ft_strspn(char const *str, char const *accept)
 {
