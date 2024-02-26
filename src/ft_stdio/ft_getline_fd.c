@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:06:05 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/01/25 16:48:39 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/02/24 14:14:13 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ char	*ft_getline_fd(int fd)
 	}
 	if (was_read < 0)
 	{
-		if (line)
-			free(line);
+		free(line);
 		return (NULL);
 	}
 	return (line);
