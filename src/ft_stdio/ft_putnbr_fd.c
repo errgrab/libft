@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:48:44 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/10/09 12:52:02 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/02/26 15:00:28 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 	}
 	while (nb >= 10)
-	{
 		ft_putnbr_fd(nb / 10, fd);
-		nb = nb % 10;
-	}
+	nb = nb % 10;
 	ft_putchar_fd(nb + '0', fd);
 }
