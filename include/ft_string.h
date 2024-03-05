@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 00:29:52 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/02/26 16:16:23 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/03/04 15:10:45 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t	ft_strspn(char const *str, char const *accept);
 size_t	ft_strcspn(char const *str, char const *reject);
 char	*ft_strtok(char *str, char const *delim);
+char	*ft_strtok_r(char *str, char const *delim, char **saveptr);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t sz);
 size_t	ft_strlcat(char *dst, const char *src, size_t sz);

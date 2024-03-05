@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtok.c                                        :+:      :+:    :+:   */
+/*   ft_strtok_r.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 19:09:26 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/03/05 15:58:15 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/03/05 15:39:56 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/03/05 16:28:01 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtok(char *str, char const *delim)
+char	*ft_strtok_r(char *str, char const *delim, char **saveptr)
 {
-	static char	*buf;
-
 	if (str)
-		buf = str;
-	if (!buf)
+		*saveptr = str;
+	if (!*saveptr)
 		return (NULL);
-	str = buf + ft_strspn(buf, delim);
-	buf = str + ft_strcspn(str, delim);
-	if (buf == str)
-		return (buf = NULL, buf);
-	if (*buf)
-		*(buf++) = '\0';
+	str = *saveptr + ft_strspn(*saveptr, delim);
+	*saveptr = str + ft_strcspn(str, delim);
+	if (*saveptr == str)
+		return (*saveptr = NULL, *saveptr);
+	if (**saveptr)
+		*(*saveptr)++ = '\0';
 	else
-		buf = NULL;
+		*saveptr = NULL;
 	return (str);
 }
