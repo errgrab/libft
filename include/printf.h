@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:59:37 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/01/25 17:01:56 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/03/06 14:07:32 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef PRINTF_H
+# define PRINTF_H
 
 /* Conversions */
 # define CNV "cspdiuxX%"

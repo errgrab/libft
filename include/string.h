@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.h                                        :+:      :+:    :+:   */
+/*   string.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 00:29:52 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/03/04 15:10:45 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/03/06 14:07:58 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRING_H
-# define FT_STRING_H
+#ifndef STRING_H
+# define STRING_H
 
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);

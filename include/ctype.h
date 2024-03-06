@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctype.h                                         :+:      :+:    :+:   */
+/*   ctype.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 10:41:19 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/01/23 00:27:47 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/03/06 14:07:16 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CTYPE_H
-# define FT_CTYPE_H
+#ifndef CTYPE_H
+# define CTYPE_H
 
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
