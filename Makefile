@@ -6,7 +6,7 @@
 #    By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 17:50:19 by ecarvalh          #+#    #+#              #
-#    Updated: 2024/03/05 20:41:49 by ecarvalh         ###   ########.fr        #
+#    Updated: 2024/03/11 13:30:08 by ecarvalh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SDIR	= src/ctype src/list src/stdio src/stdlib src/string src/printf \
 SRCS	= $(foreach dir,$(SDIR), $(wildcard $(dir)/ft_*.c))
 ODIR	= objs
 OBJS	= $(addprefix $(ODIR)/,$(SRCS:.c=.o))
-CFLAGS	= -Wall -Wextra -Werror -I.
+CFLAGS	= -O3 -Wall -Wextra -Werror -I.
 NAME	= libft.a
 
 vpath %.c $(SDIR)
