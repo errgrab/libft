@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:35:12 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/09 19:48:15 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/03/13 18:04:23 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	size_t	l;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	l = 0;
+	while (s[l])
+		l++;
+	return (l);
 }

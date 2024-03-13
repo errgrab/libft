@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 18:21:44 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/08 18:40:37 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/03/13 20:00:26 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	while (n--)
-		*((unsigned char *)s + n) = (unsigned char)c;
+		*((char *)s + n) = (char)c;
 	return (s);
 }
