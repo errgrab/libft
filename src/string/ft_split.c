@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:03:31 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/02/12 19:45:31 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:19:52 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	**ft_split(char const *str, char const *delim)
 		tok = ft_strtok(NULL, delim);
 		i++;
 	}
-	res[i] = '\0';
+	res[i] = NULL;
 	free(tmp);
 	return (res);
 }

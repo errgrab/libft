@@ -6,10 +6,11 @@
 #    By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 17:50:19 by ecarvalh          #+#    #+#              #
-#    Updated: 2024/03/11 13:30:08 by ecarvalh         ###   ########.fr        #
+#    Updated: 2024/03/14 19:20:05 by ecarvalh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC		= clang
 SDIR	= src/ctype src/list src/stdio src/stdlib src/string src/printf \
 		src/printf/fun
 SRCS	= $(foreach dir,$(SDIR), $(wildcard $(dir)/ft_*.c))
