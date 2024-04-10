@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 18:01:25 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/03/13 20:07:33 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:23:22 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,5 @@ char	*ft_stpcpy(char *restrict dst, const char *restrict src)
 {
 	char	*p;
 
-	p = ft_mempcpy(dst, src, ft_strlen(src));
-	*p = 0;
-	return (p);
+	return (p = ft_mempcpy(dst, src, ft_strlen(src)), *p = 0, p);
 }

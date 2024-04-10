@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 15:39:56 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/03/05 16:28:01 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:17:13 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strtok_r(char *str, char const *delim, char **saveptr)
 {
+	if (!saveptr)
+		return (NULL);
 	if (str)
 		*saveptr = str;
 	if (!*saveptr)
