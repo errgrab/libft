@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ctype.h                                            :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 10:41:19 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 23:17:19 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/04/10 22:49:13 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/10 22:51:19 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CTYPE_H
-# define CTYPE_H
+#include "libft.h"
 
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_isspace(int c);
-
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-
-#endif
+int	ft_isspace(int c)
+{
+	if (ft_strchr("\t\n\v\f\r ", (char)c))
+		return (1);
+	return (0);
+}

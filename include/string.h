@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 00:29:52 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 17:07:17 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/10 23:14:36 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ char	*ft_strdup(const char *s);
 char	*ft_strndup(const char *s, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strstr(const char *s1, const char *s2);
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t	ft_strspn(char const *str, char const *accept);
 size_t	ft_strcspn(char const *str, char const *reject);
+char	*ft_strpbrk(char const *str, char const *accept);
 char	*ft_strtok(char *str, char const *delim);
 char	*ft_strtok_r(char *str, char const *delim, char **saveptr);
 char	*ft_stpcpy(char *dst, const char *src);

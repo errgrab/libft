@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ctype.h                                            :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 10:41:19 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 23:17:19 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/04/10 23:07:37 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/10 23:29:04 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CTYPE_H
-# define CTYPE_H
+#include "libft.h"
 
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_isspace(int c);
+char	*ft_strpbrk(char const *str, char const *accept)
+{
+	char const	*res;
 
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-
-#endif
+	res = str + ft_strcspn(str, accept);
+	if (!*res)
+		return (NULL);
+	return ((char *)res);
+}
