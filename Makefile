@@ -6,7 +6,6 @@
 #    By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 17:50:19 by ecarvalh          #+#    #+#              #
-#    Updated: 2024/04/10 18:04:39 by ecarvalh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,4 +39,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+love:
+	@echo 'not war?'
+
+.PHONY: all clean fclean re bonus love
