@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 18:51:11 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/02/26 16:15:29 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/10 22:10:58 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strcspn(char const *str, char const *reject)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (str[i] && !ft_strchr(reject, str[i]))
-		i++;
-	return (i);
+	len = 0;
+	while (str[len] && !ft_strchr(reject, str[len]))
+		len++;
+	return (len);
 }
