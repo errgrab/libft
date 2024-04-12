@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 20:17:24 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 18:56:09 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/12 14:55:35 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1++ == *s2++ && *s1 && *s2)
 		;
-	return (*s1 - *s2);
+	return (*--s1 - *--s2);
 }
