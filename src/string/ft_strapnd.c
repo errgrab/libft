@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mempcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strapnd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 17:53:20 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 14:52:58 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/01/25 16:11:45 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/10 17:06:18 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_mempcpy(void *dest, const void *src, size_t n)
+char	*ft_strapnd(char *dest, char const *src)
 {
-	if (!dest || !src)
-		return (NULL);
-	while (n--)
-		*(char *)dest++ = *(char *)src++;
-	return (dest);
+	char	*res;
+
+	if (!src)
+		return (dest);
+	if (!dest)
+		return (ft_strdup(src));
+	res = ft_strjoin(dest, src);
+	free(dest);
+	return (res);
 }

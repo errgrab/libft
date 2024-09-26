@@ -6,7 +6,7 @@
 /*   By: ecarvalh <ecarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:48:53 by ecarvalh          #+#    #+#             */
-/*   Updated: 2023/09/09 19:54:54 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/12 16:24:09 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*dup;
+	char	*res;
+	size_t	len;
 
-	dup = (char *)malloc(ft_strlen(s) + 1);
-	if (!dup)
+	if (!s)
 		return (NULL);
-	ft_memcpy(dup, s, ft_strlen(s) + 1);
-	return (dup);
+	len = ft_strlen(s);
+	res = (char *)ft_calloc(sizeof(char), len + 1);
+	if (!res)
+		return (NULL);
+	ft_memcpy(res, s, len);
+	res[len] = '\0';
+	return (res);
 }

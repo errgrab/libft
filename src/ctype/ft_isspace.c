@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strappend.c                                     :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 16:11:45 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/01/25 17:19:14 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/04/10 22:49:13 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/10 22:51:19 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strappend(char **dest, char *src)
+int	ft_isspace(int c)
 {
-	char	*old_dest;
-
-	if (!src)
-	{
-		*dest = NULL;
-		return ;
-	}
-	if (!*dest)
-	{
-		*dest = ft_strdup(src);
-		return ;
-	}
-	old_dest = *dest;
-	*dest = ft_strjoin(*dest, src);
-	free(old_dest);
+	if (ft_strchr("\t\n\v\f\r ", (char)c))
+		return (1);
+	return (0);
 }

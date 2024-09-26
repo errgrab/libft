@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:06:05 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/02/24 14:14:13 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/10 18:01:56 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_getline_fd(int fd)
 	while (was_read > 0)
 	{
 		buf[was_read] = 0;
-		ft_strappend(&line, buf);
+		line = ft_strapnd(line, buf);
 		if (*buf == '\n')
 			break ;
 		was_read = read(fd, &buf, 1);

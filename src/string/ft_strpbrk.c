@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mempcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 17:53:20 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 14:52:58 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/04/10 23:07:37 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/10 23:29:04 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_mempcpy(void *dest, const void *src, size_t n)
+char	*ft_strpbrk(char const *str, char const *accept)
 {
-	if (!dest || !src)
+	char const	*res;
+
+	res = str + ft_strcspn(str, accept);
+	if (!*res)
 		return (NULL);
-	while (n--)
-		*(char *)dest++ = *(char *)src++;
-	return (dest);
+	return ((char *)res);
 }

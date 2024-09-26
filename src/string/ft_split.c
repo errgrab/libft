@@ -6,7 +6,7 @@
 /*   By: ecarvalh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:03:31 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/03/14 19:19:52 by ecarvalh         ###   ########.fr       */
+/*   Updated: 2024/04/10 18:36:26 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,24 @@
 
 char	**ft_split(char const *str, char const *delim)
 {
-	char	**res;
+	char		**res;
+	char const	*tok;
+	int			i;
 
-	auto char *tmp = ft_strdup(str);
-	res = (char **)ft_calloc((ft_wordcount(str, delim) + 1), sizeof(char *));
-	if (!res || !tmp)
+	res = (char **)ft_calloc(sizeof(char *), ft_wordcount(str, delim) + 1);
+	if (!res)
+		return (free(res), NULL);
+	tok = str + ft_strspn(str, delim);
+	str = tok + ft_strcspn(tok, delim);
+	i = -1;
+	while (*tok)
 	{
-		free(tmp);
-		free(res);
-		return (NULL);
-	}
-	auto int i = 0;
-	auto char *tok = ft_strtok(tmp, delim);
-	while (tok)
-	{
-		res[i] = ft_strdup(tok);
+		res[++i] = ft_strndup(tok, str - tok);
 		if (!res[i])
 			return (ft_freesplit(res));
-		tok = ft_strtok(NULL, delim);
-		i++;
+		tok = str + ft_strspn(str, delim);
+		str = tok + ft_strcspn(tok, delim);
 	}
-	res[i] = NULL;
-	free(tmp);
+	res[++i] = NULL;
 	return (res);
 }

@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mempcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 17:53:20 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 14:52:58 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/04/10 14:40:09 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/10 14:43:21 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_mempcpy(void *dest, const void *src, size_t n)
+char	*ft_strndup(const char *s, size_t n)
 {
-	if (!dest || !src)
+	char	*res;
+	size_t	len;
+
+	len = ft_strlen(s);
+	if (n < len)
+		len = n;
+	res = (char *)ft_calloc(sizeof(char), len + 1);
+	if (!res)
 		return (NULL);
-	while (n--)
-		*(char *)dest++ = *(char *)src++;
-	return (dest);
+	ft_memcpy(res, s, len);
+	res[len] = '\0';
+	return (res);
 }

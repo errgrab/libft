@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mempcpy.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 17:53:20 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 14:52:58 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/04/10 22:52:17 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/10 22:54:45 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_mempcpy(void *dest, const void *src, size_t n)
+int	ft_tolower(int c)
 {
-	if (!dest || !src)
-		return (NULL);
-	while (n--)
-		*(char *)dest++ = *(char *)src++;
-	return (dest);
+	if (c >= 'A' && c <= 'Z')
+		return (c + ('a' - 'A'));
+	return (c);
 }

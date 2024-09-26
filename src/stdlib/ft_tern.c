@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mempcpy.c                                       :+:      :+:    :+:   */
+/*   ft_tern.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecarvalh <ecarvalh@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 17:53:20 by ecarvalh          #+#    #+#             */
-/*   Updated: 2024/04/10 14:52:58 by ecarvalh         ###   ########.fr       */
+/*   Created: 2024/04/13 20:01:56 by ecarvalh          #+#    #+#             */
+/*   Updated: 2024/04/13 20:01:57 by ecarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_mempcpy(void *dest, const void *src, size_t n)
+size_t	ft_tern(size_t cond, size_t a, size_t b)
 {
-	if (!dest || !src)
-		return (NULL);
-	while (n--)
-		*(char *)dest++ = *(char *)src++;
-	return (dest);
+	if (cond)
+		return (a);
+	return (b);
 }
